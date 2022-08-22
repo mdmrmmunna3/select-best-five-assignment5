@@ -47,9 +47,9 @@
                             <div class="card">
                               <img src="img/messi.png" class="card-img-top" alt="...">
                               <div class="card-body bg-black">
-                                <h5 class="card-title text-white fw-bold">Lionel Messi</h5>
+                                <h5 id="player1-name" class="card-title text-white fw-bold">Lionel Messi</h5>
                                 <p class="card-text text-secondary">46 Goal - 120 Assist</p>
-                                <button class="btn-style">Select</button>
+                                <button onclick="handelOnClick ('player1-name')" class="btn-style">Select</button>
                               </div>
                             </div>
                           </div>
@@ -58,9 +58,9 @@
                             <div class="card">
                               <img src="img/neymar.png" class="card-img-top" alt="...">
                               <div class="card-body bg-black">
-                                <h5 class="card-title text-white fw-bold">Neymar Jr</h5>
+                                <h5 id="player2-name" class="card-title text-white fw-bold">Neymar Jr</h5>
                                 <p class="card-text text-secondary">46 Goal - 120 Assist</p>
-                                <button class="btn-style">Select</button>
+                                <button onclick="handelOnClick ('player2-name')"  class="btn-style">Select</button>
                               </div>
                             </div>
                           </div>
@@ -69,9 +69,9 @@
                             <div class="card">
                               <img src="img/di-maria.png" class="card-img-top" alt="...">
                               <div class="card-body bg-black">
-                                <h5 class="card-title text-white fw-bold">Di Maria</h5>
+                                <h5 id="player3-name"  class="card-title text-white fw-bold">Di Maria</h5>
                                 <p class="card-text text-secondary">46 Goal - 120 Assist</p>
-                                <button class="btn-style">Select</button>
+                                <button onclick="handelOnClick ('player3-name') " class="btn-style">Select</button>
                               </div>
                             </div>
                           </div>
@@ -79,9 +79,9 @@
                             <div class="card">
                               <img src="img/ramos.png" class="card-img-top" alt="...">
                               <div class="card-body bg-black">
-                                <h5 class="card-title text-white fw-bold">Sergio Ramos</h5>
+                                <h5 id="player4-name" class="card-title text-white fw-bold">Sergio Ramos</h5>
                                 <p class="card-text text-secondary">46 Goal - 120 Assist</p>
-                                <button class="btn-style">Select</button>
+                                <button onclick="handelOnClick ('player4-name') " class="btn-style">Select</button>
                               </div>
                             </div>
                           </div>
@@ -90,9 +90,9 @@
                             <div class="card">
                               <img src="img/machado.png" class="card-img-top" alt="...">
                               <div class="card-body bg-black">
-                                <h5 class="card-title text-white fw-bold">Vítor Machado</h5>
+                                <h5 id="player5-name" class="card-title text-white fw-bold">Vítor Machado</h5>
                                 <p class="card-text text-secondary">46 Goal - 120 Assist</p>
-                                <button class="btn-style">Select</button>
+                                <button onclick="handelOnClick ('player5-name') " class="btn-style">Select</button>
                               </div>
                             </div>
                           </div>
@@ -101,9 +101,9 @@
                             <div class="card">
                               <img src="img/mbappe.png" class="card-img-top" alt="...">
                               <div class="card-body bg-black">
-                                <h5 class="card-title text-white fw-bold">Kylian Mbappé</h5>
+                                <h5 id="player6-name" class="card-title text-white fw-bold">Kylian Mbappé</h5>
                                 <p class="card-text text-secondary">46 Goal - 120 Assist</p>
-                                <button class="btn-style">Select</button>
+                                <button onclick="handelOnClick ('player6-name') " class="btn-style">Select</button>
                               </div>
                             </div>
                         </div>
@@ -116,23 +116,23 @@
                     <div class="row row-cols-1 g-4">
                         <div class="col">
                             <div class="card bg-black">
-                              <h5 class="text-center text-white">Selected - V</h5>
+                              <h4 class="text-center text-white">Selected - V</h4>
                               <img class="maker-png" src="img/Ureg-Ureg Marker.png" alt="">
-                              <!-- <ol class="text-white">
+                              <ol id="list-container" class="text-white">
+                                <!-- <li class="player-list mb-4"></li>
                                 <li class="player-list mb-4"></li>
                                 <li class="player-list mb-4"></li>
                                 <li class="player-list mb-4"></li>
-                                <li class="player-list mb-4"></li>
-                                <li class="player-list mb-4"></li>
+                                <li class="player-list mb-4"></li> -->
                                 
-                              </ol> -->
+                              </ol>
                             </div>
                 
                         </div>
 
                         <div class="col">
                             <div class="card bg-black budget">
-                                <h5 class="text-center text-white fw-semibold">Budget</h5>
+                                <h4 class="text-center text-white fw-semibold">Budget</h4>
                                 <img class="maker-png" src="img/Ureg-Ureg Marker.png" alt="">
 
                                 <p class="text-secondary fw-semibold">Per Player <input class="w-50 py-1 border border-white text-bg-dark mb-2"type="text">
@@ -164,5 +164,6 @@
 
     <!--************* main part end ************ -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="jsFile/selecte-budget.js"></script>
 </body>
 </html>
