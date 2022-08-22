@@ -34,13 +34,21 @@ body {
 
 .btn-style {
     width: 100%;
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.568);
     color: white;
     font-weight: 500;
     text-transform: uppercase;
     padding: 5px 0;
 } 
 
+.btn-style:disabled {
+    width: 100%;
+    background-color: rgba(212, 212, 219, 0.568);
+    color: black;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 5px 0;
+} 
 .maker-png {
     width: 50%;
     margin-left: 50px;
