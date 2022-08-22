@@ -24,6 +24,7 @@
 
             <div class="col-8 text-center header-text">
                 <h1 class="header-titel">Select Best Five Player PSG Team</h1>
+                <img src="img/Line Marker.png " alt="">
                 <P class="text-white">When Manchester United signed Angel Di Maria from Real Madrid for a then-British record transfer fee of £59.7 million in August 2014, research done by the club found that Google activity relating to the Argentine shot up by 1,111% on the day of his transfer compared to when he completed his move from Benfica to the Bernabeu four years earlier.</P>
             </div>
 
@@ -34,12 +35,14 @@
     </header>
     <!------------- ******header part end********* ------------------ -->
 
+    <!--*************** main part start ************** -->
     <main class="container">
         <section>
             <div class="row gx-4">
                 <!-- player imge part  -->
                 <div class="col-9">
                     <div class="row row-cols-1 row-cols-md-3 g-4">
+                      
                         <div class="col">
                             <div class="card">
                               <img src="img/messi.png" class="card-img-top" alt="...">
@@ -108,13 +111,58 @@
                     </div>
                 </div>
 
-                <!-- select and bugest part  -->
+                <!-- selected and bugest part  -->
+                <div class="col-3">
+                    <div class="row row-cols-1 g-4">
+                        <div class="col">
+                            <div class="card bg-black">
+                              <h5 class="text-center text-white">Selected - V</h5>
+                              <img class="maker-png" src="img/Ureg-Ureg Marker.png" alt="">
+                              <!-- <ol class="text-white">
+                                <li class="player-list mb-4"></li>
+                                <li class="player-list mb-4"></li>
+                                <li class="player-list mb-4"></li>
+                                <li class="player-list mb-4"></li>
+                                <li class="player-list mb-4"></li>
+                                
+                              </ol> -->
+                            </div>
                 
+                        </div>
+
+                        <div class="col">
+                            <div class="card bg-black budget">
+                                <h5 class="text-center text-white fw-semibold">Budget</h5>
+                                <img class="maker-png" src="img/Ureg-Ureg Marker.png" alt="">
+
+                                <p class="text-secondary fw-semibold">Per Player <input class="w-50 py-1 border border-white text-bg-dark mb-2"type="text">
+                                </p>
+                                <button class="btn-calculate mb-4">calculate</button>
+
+                                <p class="text-secondary">Player Expenses : <span>$</span><span>00</span> </p>
+
+                                <p class="text-secondary fw-semibold">Manager <input class="w-50 py-1  border border-white text-bg-dark mb-2" type="text">
+                                </p>
+
+                                <p class="text-secondary fw-semibold Coach">Coach<input class="w-50 py-1 ms-4 border border-white text-bg-dark mb-2" type="text">
+                                  
+                                </p>
+
+                                <button class="btn-calculate mb-4">calculate Total</button>
+
+                                <p class="mt-2 text-secondary"><span class="me-5 pe-5">Total</span>$<span id="">00</span></p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>               
                   
             
         </section>
     </main>
+
+    <!--************* main part end ************ -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
