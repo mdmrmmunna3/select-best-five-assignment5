@@ -1,6 +1,7 @@
+// selected five list ...
+
 const ol = document.getElementById('list-container');
 const players = document.getElementsByClassName('player');
-
 
 function handelOnClick (event) {
    
@@ -20,6 +21,7 @@ function handelOnClick (event) {
    
 }
 
+//btn disabled part...
 const clicksOnButton = document.getElementsByClassName('btn-style');
     let incrementButton = 0;
     for(const clickButton of clicksOnButton) {
@@ -37,3 +39,13 @@ const clicksOnButton = document.getElementsByClassName('btn-style');
         })
     }
    
+
+    // players budget part 
+
+    document.getElementById('claculate-button').addEventListener('click', function(){
+        // console.log('calculate button are clicked');
+        const perPlayersBudeget = document.getElementById('players-money-field');
+        const perPlayersBudgetString = perPlayersBudeget.value;
+        const perPlayersBudgetAmount = parseFloat(perPlayersBudgetString);
+        // console.log(perPlayersBudgetAmount);
+    })
