@@ -1,3 +1,4 @@
+
 // selected five list ...
 
 const ol = document.getElementById('list-container');
@@ -46,9 +47,21 @@ const clicksOnButton = document.getElementsByClassName('btn-style');
     function getElementValueById(inputFieldId) {
         const perPlayerDisplay = document.getElementById(inputFieldId);
         const perPlayerStringValue = perPlayerDisplay.value;
-        const perPlayerValueNumber = parseFloat(perPlayerStringValue);
+        const perPlayerValueNumber = parseInt(perPlayerStringValue);
         // perPlayerDisplay.value = '';
+       
+        
+    if (isNaN(perPlayerValueNumber)) {
+        alert("Plese Input a Number")
+        perPlayerValueNumber = '';
+        
         return perPlayerValueNumber;
+    }
+
+    else if (perPlayerValueNumber >= 0) {
+        return perPlayerValueNumber;
+    }
+        // return perPlayerValueNumber;
 
     }
     
@@ -57,12 +70,20 @@ const clicksOnButton = document.getElementsByClassName('btn-style');
     function getElementTextById(inputFieldId) {
         const perPlayerDisplay = document.getElementById(inputFieldId);
         const perPlayerStringValue = perPlayerDisplay.innerText;
-        const perPlayerValueNumber = parseFloat(perPlayerStringValue);
-        perPlayerDisplay.value = '';
-        return perPlayerValueNumber;
+        const perPlayerValueAmount = parseInt(perPlayerStringValue);
+        return perPlayerValueAmount;
     }
     
+    function showingDisplay(inputFieldId, amount) {
+        const idName = document.getElementById(inputFieldId)
+        if (isNaN(amount)) {
+        }
+        else {
+            idName.innerText = amount;
+        }
     
+    }
+
     // per player calculation 
     document.getElementById('claculate-button').addEventListener('click', function() {
         const perPlayer = getElementValueById('per-players-field');
