@@ -52,7 +52,7 @@ const clicksOnButton = document.getElementsByClassName('btn-style');
        
         
     if (isNaN(perPlayerValueNumber)) {
-        alert("Plese Input a Number")
+        alert("Please Input a Number")
         perPlayerValueNumber = '';
         
         return perPlayerValueNumber;
