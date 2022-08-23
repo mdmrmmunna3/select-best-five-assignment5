@@ -30,7 +30,7 @@ const clicksOnButton = document.getElementsByClassName('btn-style');
             
            if(incrementButton <= 4) {
             clickButton.setAttribute('disabled', true);
-            console.log(incrementButton)
+            console.log(incrementButton);
            }
           else {
             clickButton.setAttribute('disabled', false)
@@ -42,10 +42,33 @@ const clicksOnButton = document.getElementsByClassName('btn-style');
 
     // players budget part 
 
-    document.getElementById('claculate-button').addEventListener('click', function(){
-        // console.log('calculate button are clicked');
-        const perPlayersBudeget = document.getElementById('players-money-field');
-        const perPlayersBudgetString = perPlayersBudeget.value;
-        const perPlayersBudgetAmount = parseFloat(perPlayersBudgetString);
-        // console.log(perPlayersBudgetAmount);
+    //  Function for input field 
+    function getElementValueById(inputFieldId) {
+        const perPlayerDisplay = document.getElementById(inputFieldId);
+        const perPlayerStringValue = perPlayerDisplay.value;
+        const perPlayerValueNumber = parseFloat(perPlayerStringValue);
+        return perPlayerValueNumber;
+    }
+    
+    
+    // function for text field 
+    function getElementTextById(inputFieldId) {
+        const perPlayerDisplay = document.getElementById(eventId);
+        const perPlayerStringValue = perPlayerDisplay.innerText;
+        const perPlayerValueNumber = parseFloat(perPlayerStringValue);
+        return perPlayerValueNumber;
+    }
+    
+    
+    // per player calculation 
+    document.getElementById('claculate-button').addEventListener('click', function() {
+        const perPlayer = getElementValueById('per-players-field');
+        console.log(perPlayer);
+    
+        const playerExpensesField = document.getElementById('player-expenses');
+        const playerExpensesAmount = 5 * perPlayer;
+        console.log(playerExpensesField);
+        playerExpensesField.innerText = playerExpensesAmount;
     })
+    
+    
