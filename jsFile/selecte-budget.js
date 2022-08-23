@@ -28,7 +28,7 @@ const clicksOnButton = document.getElementsByClassName('btn-style');
         clickButton.addEventListener('click', function(){
             incrementButton++;
             
-           if(incrementButton <= 4) {
+           if(incrementButton <= 5) {
             clickButton.setAttribute('disabled', true);
             console.log(incrementButton);
            }
@@ -47,15 +47,18 @@ const clicksOnButton = document.getElementsByClassName('btn-style');
         const perPlayerDisplay = document.getElementById(inputFieldId);
         const perPlayerStringValue = perPlayerDisplay.value;
         const perPlayerValueNumber = parseFloat(perPlayerStringValue);
+        // perPlayerDisplay.value = '';
         return perPlayerValueNumber;
+
     }
     
     
     // function for text field 
     function getElementTextById(inputFieldId) {
-        const perPlayerDisplay = document.getElementById(eventId);
+        const perPlayerDisplay = document.getElementById(inputFieldId);
         const perPlayerStringValue = perPlayerDisplay.innerText;
         const perPlayerValueNumber = parseFloat(perPlayerStringValue);
+        perPlayerDisplay.value = '';
         return perPlayerValueNumber;
     }
     
@@ -64,11 +67,27 @@ const clicksOnButton = document.getElementsByClassName('btn-style');
     document.getElementById('claculate-button').addEventListener('click', function() {
         const perPlayer = getElementValueById('per-players-field');
         console.log(perPlayer);
-    
+        
         const playerExpensesField = document.getElementById('player-expenses');
-        const playerExpensesAmount = 5 * perPlayer;
+        
+        const playerExpensesAmount = players.length * perPlayer;
         console.log(playerExpensesField);
         playerExpensesField.innerText = playerExpensesAmount;
+        
     })
     
     
+    // total calculation 
+    document.getElementById('total-calculation-button').addEventListener('click', function() {
+        const managerAmount = getElementValueById('manager-field');
+        const coahAmount = getElementValueById('coach-field');
+        const playersAmount = getElementTextById('player-expenses');
+    
+        const totalCost = managerAmount + coahAmount + playersAmount;
+    
+        const totalElementField = document.getElementById('total-field');
+        totalElementField.innerText = totalCost;
+    })
+
+
+   
